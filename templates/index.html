@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Add the SocketIO JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+
+    <!-- Add your SocketIO connection code -->
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+    </script>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept=".png, .jpg, .jpeg">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

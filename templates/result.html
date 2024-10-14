@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>  
+    
+     .download-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        position: absolute; /* Add absolute positioning for the download button */
+        bottom: 20px; /* Position the button at the bottom */
+        right: 20px; /* Position the button at the right */
+    }
+    .download-button:hover {
+  background-color: RoyalBlue;
+    }
+    .download-button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Display the generated HTML content -->
+        {{ result_html | safe }}
+    </div>
+    <div>
+        <!-- Add a link or button to trigger the download -->
+        <a href="{{ url_for('download', image_path=image_path) }}" class="download-button" download="combined_result.html">Download Combined Result</a>
+    </div>
+</body>
+</html>
