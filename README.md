@@ -11,6 +11,7 @@ DeepDoctation/
 ├── Images.py                      # Handles image processing and detection
 ├── Layout.py                      # Generates layout structure
 ├── Ocr.py                         # Performs OCR using PyTesseract
+├── best.pt                        # YOLOv5 trained model
 ├── How to use and Working...pdf   # Documentation
 ├── Readme.md                      # You are here
 ├── templates/                     # HTML templates for Flask
